@@ -23,6 +23,7 @@ func (db *DB) connect(cfg *config.DB) (err error) {
 		cfg.Name,
 	)
 	db.DB, err = gorm.Open(mysql.Open(dbUri), &gorm.Config{})
+	db.AutoMigrate()
 	// Try to ping database.
 	if err != nil {
 		return fmt.Errorf("can't sent ping to database, %w", err)
