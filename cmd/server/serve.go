@@ -2,6 +2,8 @@ package server
 
 import (
 	"fiber-api-boilerplate/pkg/config"
+	"fiber-api-boilerplate/pkg/middleware"
+	"fiber-api-boilerplate/pkg/route"
 	"fiber-api-boilerplate/platform/database"
 	"fmt"
 	"log"
@@ -18,6 +20,15 @@ func Serve() {
 	// Define Fiber config & app.
 	fiberCfg := config.FiberConfig()
 	app := fiber.New(fiberCfg)
+
+	// Attach Middlewares.
+	middleware.FiberMiddleware(app)
+
+	// Routes.
+	route.GeneralRoute(app)
+	route.PublicRoutes(app)
+	route.AdminRoutes(app)
+	route.NotFoundRoute(app)
 
 	// start http server
 	serverAddr := fmt.Sprintf("%s:%d", appCfg.Host, appCfg.Port)
