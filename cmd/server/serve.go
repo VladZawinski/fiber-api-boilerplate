@@ -5,6 +5,7 @@ import (
 	"fiber-api-boilerplate/pkg/middleware"
 	"fiber-api-boilerplate/pkg/route"
 	"fiber-api-boilerplate/platform/database"
+	"fiber-api-boilerplate/platform/logger"
 	"fmt"
 	"log"
 
@@ -17,10 +18,11 @@ func Serve() {
 	if err := database.ConnectDB(); err != nil {
 		log.Fatalf("failed database setup. error: %v", err)
 	}
+	logger.SetUpLogger()
+	logr := logger.GetLogger()
 	// Define Fiber config & app.
 	fiberCfg := config.FiberConfig()
 	app := fiber.New(fiberCfg)
-
 	// Attach Middlewares.
 	middleware.FiberMiddleware(app)
 
@@ -34,6 +36,6 @@ func Serve() {
 	// start http server
 	serverAddr := fmt.Sprintf("%s:%d", appCfg.Host, appCfg.Port)
 	if err := app.Listen(serverAddr); err != nil {
-		log.Fatal("Oops... server is not running! error: %v", err)
+		logr.Error("Oops... server is not running! error: %v", err)
 	}
 }
