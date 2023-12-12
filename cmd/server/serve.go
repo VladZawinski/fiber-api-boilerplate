@@ -30,6 +30,7 @@ func Serve() {
 	route.GeneralRoute(app)
 	route.PublicRoutes(app)
 	route.AuthRoutes(app)
+	route.UserRoute(app)
 	route.AdminRoutes(app)
 	route.NotFoundRoute(app)
 

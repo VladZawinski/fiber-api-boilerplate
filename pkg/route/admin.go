@@ -2,6 +2,7 @@ package route
 
 import (
 	"fiber-api-boilerplate/pkg/middleware"
+	"fiber-api-boilerplate/platform/logger"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -12,6 +13,7 @@ func AdminRoutes(a *fiber.App) {
 	adminRoute := a.Group("/api/v1/admin", middleware.JWTProtected(), middleware.IsAdmin)
 	// User
 	adminRoute.Post("/", func(c *fiber.Ctx) error {
+		logger.GetLogger().Debug("Hello")
 		c.SendStatus(200)
 		return nil
 	})

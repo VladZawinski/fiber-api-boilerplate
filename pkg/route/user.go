@@ -1,12 +1,15 @@
 package route
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"fiber-api-boilerplate/pkg/middleware"
 
-// PublicRoutes func for describe group of public route.
-func PublicRoutes(a *fiber.App) {
+	"github.com/gofiber/fiber/v2"
+)
+
+func UserRoute(a *fiber.App) {
 	// Create route group.
-	route := a.Group("/api/v1/")
-	route.Post("check/", func(c *fiber.Ctx) error {
+	route := a.Group("/api/v1/", middleware.JWTProtected())
+	route.Post("play/", func(c *fiber.Ctx) error {
 		c.SendStatus(200)
 		return nil
 	})
