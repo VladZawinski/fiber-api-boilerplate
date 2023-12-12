@@ -27,6 +27,7 @@ func Serve() {
 	// Routes.
 	route.GeneralRoute(app)
 	route.PublicRoutes(app)
+	route.AuthRoutes(app)
 	route.AdminRoutes(app)
 	route.NotFoundRoute(app)
 

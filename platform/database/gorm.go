@@ -1,6 +1,7 @@
 package database
 
 import (
+	"fiber-api-boilerplate/app/model"
 	"fiber-api-boilerplate/pkg/config"
 	"fmt"
 
@@ -23,7 +24,7 @@ func (db *DB) connect(cfg *config.DB) (err error) {
 		cfg.Name,
 	)
 	db.DB, err = gorm.Open(mysql.Open(dbUri), &gorm.Config{})
-	db.AutoMigrate()
+	db.AutoMigrate(&model.User{})
 	// Try to ping database.
 	if err != nil {
 		return fmt.Errorf("can't sent ping to database, %w", err)
