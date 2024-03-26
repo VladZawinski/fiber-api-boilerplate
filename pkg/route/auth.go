@@ -1,7 +1,7 @@
 package route
 
 import (
-	"fiber-api-boilerplate/app/controller"
+	"futbook/app/controller"
 
 	"github.com/gofiber/fiber/v2"
 )

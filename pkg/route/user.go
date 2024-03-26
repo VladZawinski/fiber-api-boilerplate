@@ -1,7 +1,7 @@
 package route
 
 import (
-	"fiber-api-boilerplate/pkg/middleware"
+	"futbook/pkg/middleware"
 
 	"github.com/gofiber/fiber/v2"
 )

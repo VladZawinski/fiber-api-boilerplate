@@ -1,10 +1,10 @@
 package repository
 
 import (
-	"fiber-api-boilerplate/app/dto"
-	"fiber-api-boilerplate/app/model"
-	"fiber-api-boilerplate/pkg/common"
-	"fiber-api-boilerplate/platform/database"
+	"futbook/app/dto"
+	"futbook/app/model"
+	"futbook/pkg/common"
+	"futbook/platform/database"
 )
 
 type UserRepo struct {

@@ -1,4 +1,4 @@
-module fiber-api-boilerplate
+module futbook
 
 go 1.18
 

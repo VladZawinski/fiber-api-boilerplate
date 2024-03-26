@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"fiber-api-boilerplate/app/dto"
-	"fiber-api-boilerplate/app/model"
+	"futbook/app/dto"
+	"futbook/app/model"
 )
 
 type UserRepository interface {

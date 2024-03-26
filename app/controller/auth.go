@@ -1,11 +1,11 @@
 package controller
 
 import (
-	"fiber-api-boilerplate/app/dto"
-	"fiber-api-boilerplate/app/repository"
-	"fiber-api-boilerplate/pkg/config"
-	"fiber-api-boilerplate/platform/database"
 	"fmt"
+	"futbook/app/dto"
+	"futbook/app/repository"
+	"futbook/pkg/config"
+	"futbook/platform/database"
 	"time"
 
 	"github.com/gofiber/fiber/v2"

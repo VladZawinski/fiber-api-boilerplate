@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fiber-api-boilerplate/cmd/server"
-	"fiber-api-boilerplate/pkg/config"
+	"futbook/cmd/server"
+	"futbook/pkg/config"
 )
 
 func main() {

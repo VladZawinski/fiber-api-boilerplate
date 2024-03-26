@@ -1,9 +1,9 @@
 package database
 
 import (
-	"fiber-api-boilerplate/app/model"
-	"fiber-api-boilerplate/pkg/config"
 	"fmt"
+	"futbook/app/model"
+	"futbook/pkg/config"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

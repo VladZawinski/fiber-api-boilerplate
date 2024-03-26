@@ -1,12 +1,12 @@
 package server
 
 import (
-	"fiber-api-boilerplate/pkg/config"
-	"fiber-api-boilerplate/pkg/middleware"
-	"fiber-api-boilerplate/pkg/route"
-	"fiber-api-boilerplate/platform/database"
-	"fiber-api-boilerplate/platform/logger"
 	"fmt"
+	"futbook/pkg/config"
+	"futbook/pkg/middleware"
+	"futbook/pkg/route"
+	"futbook/platform/database"
+	"futbook/platform/logger"
 	"log"
 
 	"github.com/gofiber/fiber/v2"

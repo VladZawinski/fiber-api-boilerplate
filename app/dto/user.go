@@ -1,6 +1,6 @@
 package dto
 
-import "fiber-api-boilerplate/app/model"
+import "futbook/app/model"
 
 type User struct {
 	ID        uint   `json:"id"`

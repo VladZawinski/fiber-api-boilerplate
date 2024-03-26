@@ -1,7 +1,7 @@
 package logger
 
 import (
-	"fiber-api-boilerplate/pkg/config"
+	"futbook/pkg/config"
 	"os"
 
 	"github.com/sirupsen/logrus"

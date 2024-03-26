@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"errors"
-	"fiber-api-boilerplate/pkg/config"
+	"futbook/pkg/config"
 	"time"
 
 	jwtware "github.com/gofiber/contrib/jwt"
